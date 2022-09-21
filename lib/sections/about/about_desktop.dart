@@ -93,34 +93,16 @@ class AboutDesktop extends StatelessWidget {
                         color: Colors.grey[800],
                         thickness: AppDimensions.normalize(0.5),
                       ),
-                      Row(
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
-                              AboutMeData(
-                                data: "Name",
-                                information: "Xavier Soh",
-                              ),
-                              AboutMeData(
-                                data: "Age",
-                                information: "30",
-                              ),
-                            ],
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: const [
+                          AboutMeData(
+                            data: "Email",
+                            information: "sohfranc@gmail.com",
                           ),
-                          const Spacer(),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
-                              AboutMeData(
-                                data: "Email",
-                                information: "sohfranc@gmail.com",
-                              ),
-                              AboutMeData(
-                                data: "From",
-                                information: "Cameroon",
-                              ),
-                            ],
+                          AboutMeData(
+                            data: "From",
+                            information: "Cameroon",
                           ),
                         ],
                       ),

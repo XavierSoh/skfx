@@ -40,10 +40,9 @@ class StaticUtils {
     "https://www.linkedin.com/in/xavier-soh-0676a41b3"
   ];
 
-  static const String resume =
-      'https://drive.google.com/file/d/1bDNNrkQtNVJbXcdwMSx0crQQvAF_nMwV/view?usp=sharing';
+  static const String resume = 'https://www.facebook.com/LeDigitaliste';
 
-  static const String gitHub = 'https://github.com/mhmzdev';
+  static const String gitHub = 'https://github.com/xaviersoh';
 }
 
 class BodyUtils {

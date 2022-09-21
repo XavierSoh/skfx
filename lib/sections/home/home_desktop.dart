@@ -1,7 +1,7 @@
-import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:folio/animations/entrance_fader.dart';
 import 'package:folio/configs/configs.dart';
+import 'package:folio/sections/home/components/get_text_kit.dart';
 import 'package:folio/utils/utils.dart';
 import 'package:folio/widget/social_links.dart';
 
@@ -15,10 +15,12 @@ class HomeDesktop extends StatelessWidget {
     return Container(
       height: size.height * 1.025,
       decoration: const BoxDecoration(
-          gradient: LinearGradient(
-              begin: Alignment.bottomLeft,
-              end: Alignment.topRight,
-              colors: [Colors.teal, Colors.black54])),
+        gradient: LinearGradient(
+          begin: Alignment.bottomLeft,
+          end: Alignment.topRight,
+          colors: [Colors.teal, Colors.black54],
+        ),
+      ),
       padding: Space.h,
       child: Stack(
         children: [
@@ -92,43 +94,9 @@ class HomeDesktop extends StatelessWidget {
                     children: [
                       Icon(
                         Icons.play_arrow_rounded,
-                        color: AppTheme.c!.primary!,
+                        color: AppTheme.c!.primaryLight!,
                       ),
-                      AnimatedTextKit(
-                        animatedTexts: [
-                          TyperAnimatedText(
-                            ' Flutter Developer',
-                            speed: const Duration(milliseconds: 50),
-                            textStyle: AppText.b1,
-                          ),
-                          TyperAnimatedText(
-                            ' Kotlin Developer',
-                            speed: const Duration(milliseconds: 50),
-                            textStyle: AppText.b1,
-                          ),
-                          TyperAnimatedText(
-                            ' Java Developer',
-                            speed: const Duration(milliseconds: 50),
-                            textStyle: AppText.b1,
-                          ),
-                          TyperAnimatedText(
-                            ' Artificial Intelligence',
-                            speed: const Duration(milliseconds: 50),
-                            textStyle: AppText.b1,
-                          ),
-                          TyperAnimatedText(
-                            ' Google Enthusiast',
-                            speed: const Duration(milliseconds: 50),
-                            textStyle: AppText.b1,
-                          ),
-                          TyperAnimatedText(
-                            ' A friend :)',
-                            speed: const Duration(milliseconds: 50),
-                            textStyle: AppText.b1,
-                          ),
-                        ],
-                        isRepeatingAnimation: true,
-                      ),
+                      getTextKit()
                     ],
                   ),
                 ),

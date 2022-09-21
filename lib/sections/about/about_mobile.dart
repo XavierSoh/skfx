@@ -93,10 +93,6 @@ class AboutMobile extends StatelessWidget {
             height: height * 0.02,
           ),
           const AboutMeData(
-            data: "Name",
-            information: "Muhammad Hamza",
-          ),
-          const AboutMeData(
             data: "Email",
             information: "hamza.6.shakeel@gmail.com",
           ),

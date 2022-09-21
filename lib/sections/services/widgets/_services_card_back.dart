@@ -45,7 +45,7 @@ class ServiceCardBackWidget extends StatelessWidget {
                           MaterialButton(
                             height: 40.0,
                             onPressed: () => openURL(
-                              'https://api.whatsapp.com/send?phone=923460159889',
+                              'https://api.whatsapp.com/send?phone=690053848',
                             ),
                             color: const Color(0xff34CB62),
                             child: Row(
@@ -66,7 +66,7 @@ class ServiceCardBackWidget extends StatelessWidget {
                             ),
                           ),
                           Space.y1!,
-                          MaterialButton(
+                          /* MaterialButton(
                             height: 40.0,
                             onPressed: () => openURL(
                               'https://www.upwork.com/freelancers/~0197b0f6aaeba9675f',
@@ -89,7 +89,7 @@ class ServiceCardBackWidget extends StatelessWidget {
                                 ),
                               ],
                             ),
-                          ),
+                          ),*/
                         ],
                       ),
                     )),

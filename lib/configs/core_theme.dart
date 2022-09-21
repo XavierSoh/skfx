@@ -2,34 +2,34 @@ import 'package:flutter/material.dart';
 
 const fontFamily = 'Poppins';
 
-final themeLight = ThemeData(
-  primaryColorLight: const Color(0xffC0392B),
+var themeLight = ThemeData(
+  primaryColorLight: Colors.tealAccent,
   brightness: Brightness.light,
-  primaryColor: const Color(0xffC0392B),
+  primaryColor: Colors.teal,
   highlightColor: Colors.black,
   canvasColor: Colors.white,
   fontFamily: fontFamily,
   backgroundColor: Colors.white,
   splashColor: Colors.transparent,
   scaffoldBackgroundColor: Colors.white,
-  colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.red).copyWith(
+  colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.teal).copyWith(
     secondary: Colors.black,
     brightness: Brightness.light,
   ),
 );
 
-final themeDark = ThemeData(
+var themeDark = ThemeData(
   brightness: Brightness.dark,
-  primaryColorDark: const Color(0xffC0392B),
-  primaryColor: const Color(0xffC0392B),
-  highlightColor: const Color(0xffC0392B),
+  primaryColorDark: Colors.teal,
+  primaryColor: Colors.teal,
+  highlightColor: Colors.teal,
   canvasColor: Colors.white,
   fontFamily: fontFamily,
   splashColor: Colors.transparent,
   backgroundColor: Colors.grey[800],
   scaffoldBackgroundColor: Colors.black,
-  colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.red).copyWith(
-    secondary: const Color(0xffC0392B),
+  colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.teal).copyWith(
+    secondary: Colors.teal,
     brightness: Brightness.dark,
   ),
 );
