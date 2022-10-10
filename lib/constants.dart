@@ -13,8 +13,10 @@ final kTools = [
   "Java",
   "PHP",
   "WordPress",
+  "JetPack",
   "Firebase",
-  "Aws",
+  "GitHub",
+  "Angular",
   "MySQL",
   "NodeJS"
 ];

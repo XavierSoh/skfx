@@ -1,8 +1,8 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:folio/configs/configs.dart';
 import 'package:folio/constants.dart';
-import 'package:folio/utils/about_utils.dart';
 import 'package:folio/utils/utils.dart';
 import 'package:folio/utils/work_utils.dart';
 import 'package:folio/widget/about_me_data.dart';
@@ -17,6 +17,7 @@ class AboutMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
+    final l = AppLocalizations.of(context);
 
     return Container(
       padding: Space.h,
@@ -47,7 +48,7 @@ class AboutMobile extends StatelessWidget {
           ),
           Space.y1!,
           Text(
-            AboutUtils.aboutMeHeadline,
+            l.aboutMeHeadline,
             style: AppText.b2b!.copyWith(
               fontFamily: 'Montserrat',
             ),
@@ -56,7 +57,7 @@ class AboutMobile extends StatelessWidget {
             height: height * 0.02,
           ),
           Text(
-            AboutUtils.aboutMeDetail,
+            l.aboutMeDetail,
             style: AppText.l1!.copyWith(
               height: 2,
               letterSpacing: 1.1,
@@ -76,8 +77,10 @@ class AboutMobile extends StatelessWidget {
             ),
           ),
           Space.y!,
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+          GridView(
+            shrinkWrap: true,
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 4, crossAxisSpacing: 0, mainAxisSpacing: 0, childAspectRatio: 3),
             children: kTools
                 .map(
                   (e) => ToolTechWidget(techName: e),
@@ -94,7 +97,7 @@ class AboutMobile extends StatelessWidget {
           ),
           const AboutMeData(
             data: "Email",
-            information: "hamza.6.shakeel@gmail.com",
+            information: "sohfranc@gmail.com",
           ),
           Space.y!,
           OutlinedButton(
@@ -104,6 +107,7 @@ class AboutMobile extends StatelessWidget {
               }),
           Space.y!,
           Wrap(
+              direction: Axis.horizontal,
               alignment: WrapAlignment.center,
               crossAxisAlignment: WrapCrossAlignment.center,
               children: WorkUtils.logos

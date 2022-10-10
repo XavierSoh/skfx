@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:folio/configs/configs.dart';
 import 'package:folio/constants.dart';
-import 'package:folio/utils/about_utils.dart';
 import 'package:folio/utils/utils.dart';
 import 'package:folio/utils/work_utils.dart';
 import 'package:folio/widget/about_me_data.dart';
@@ -17,16 +17,16 @@ class AboutDesktop extends StatelessWidget {
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
-
+    final l = AppLocalizations.of(context);
     return Container(
       padding: Space.h,
       child: Column(
         children: [
-          const CustomSectionHeading(
-            text: '\nAbout Me',
+          CustomSectionHeading(
+            text: '\n${l.aboutMe}',
           ),
-          const CustomSectionSubHeading(
-            text: 'Get to know me :)',
+          CustomSectionSubHeading(
+            text: l.getKnowMe,
           ),
           Space.y1!,
           Row(
@@ -45,21 +45,21 @@ class AboutDesktop extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Who am I?',
+                        l.whoIAm,
                         style: AppText.b1!.copyWith(
                           color: AppTheme.c!.primary,
                         ),
                       ),
                       Space.y1!,
                       Text(
-                        AboutUtils.aboutMeHeadline,
+                        l.aboutMeHeadline,
                         style: AppText.b1b!.copyWith(
                           fontFamily: 'Montserrat',
                         ),
                       ),
                       Space.y!,
                       Text(
-                        AboutUtils.aboutMeDetail,
+                        l.aboutMeDetail,
                         style: AppText.b2!.copyWith(
                           height: 2,
                           letterSpacing: 1.1,
@@ -75,17 +75,23 @@ class AboutDesktop extends StatelessWidget {
                       ),
                       Space.y!,
                       Text(
-                        'Technologies I have worked with:',
+                        l.techIWorkedWith,
                         style: AppText.l1!.copyWith(
                           color: AppTheme.c!.primary,
                         ),
                       ),
                       Space.y!,
-                      Wrap(
+                      GridView(
+                        shrinkWrap: true,
+                        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 4,
+                            crossAxisSpacing: 0,
+                            mainAxisSpacing: 0,
+                            childAspectRatio: 3),
                         children: kTools
-                            .map((e) => ToolTechWidget(
-                                  techName: e,
-                                ))
+                            .map(
+                              (e) => ToolTechWidget(techName: e),
+                            )
                             .toList(),
                       ),
                       Space.y!,
@@ -93,18 +99,9 @@ class AboutDesktop extends StatelessWidget {
                         color: Colors.grey[800],
                         thickness: AppDimensions.normalize(0.5),
                       ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const [
-                          AboutMeData(
-                            data: "Email",
-                            information: "sohfranc@gmail.com",
-                          ),
-                          AboutMeData(
-                            data: "From",
-                            information: "Cameroon",
-                          ),
-                        ],
+                      const AboutMeData(
+                        data: "Email",
+                        information: "sohfranc@gmail.com",
                       ),
                       Space.y1!,
                       Row(
@@ -114,8 +111,8 @@ class AboutDesktop extends StatelessWidget {
                             width: AppDimensions.normalize(40),
                             child: OutlinedButton(
                               onPressed: () => html.window.open(StaticUtils.resume, 'pdf'),
-                              child: const Text(
-                                "Resume",
+                              child: Text(
+                                l.myResume,
                               ),
                             ),
                           ),

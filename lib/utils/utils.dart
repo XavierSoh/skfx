@@ -32,15 +32,18 @@ class StaticUtils {
     "https://img.icons8.com/metro/208/ffffff/facebook-new--v2.png",
     "https://img.icons8.com/android/480/ffffff/twitter.png",
     "https://img.icons8.com/metro/308/ffffff/linkedin.png",
+    "https://img.icons8.com/metro/308/ffffff/youtube.png",
   ];
 
   static const List<String> socialLinks = [
     "https://www.facebook.com/LeDigitaliste",
     "https://twitter.com/XavierSOH6",
-    "https://www.linkedin.com/in/xavier-soh-0676a41b3"
+    "https://www.linkedin.com/in/xavier-soh-0676a41b3",
+    "https://www.youtube.com/channel/UCOZtSA3kwiM9DelGhUosSkg"
   ];
 
-  static const String resume = 'https://www.facebook.com/LeDigitaliste';
+  static const String resume =
+      'https://docs.google.com/document/d/e/2PACX-1vQX4uENgvtR9KI2s5sRqnaUKEam5bpgLx9g6Cee83CevGERaxOmt1TgnSGMgqsPqTgvpfqXZr1bJ1Ac/pub?embedded=true';
 
   static const String gitHub = 'https://github.com/xaviersoh';
 }

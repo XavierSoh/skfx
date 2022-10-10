@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:folio/animations/entrance_fader.dart';
 import 'package:folio/configs/configs.dart';
 import 'package:folio/sections/home/components/get_text_kit.dart';
@@ -11,7 +12,7 @@ class HomeDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-
+    final l = AppLocalizations.of(context);
     return Container(
       height: size.height * 1.025,
       decoration: const BoxDecoration(
@@ -54,7 +55,7 @@ class HomeDesktop extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Text(
-                      'WELCOME TO MY PORTFOLIO!',
+                      l.welcomeTitle,
                       style: AppText.b1!.copyWith(
                         fontFamily: 'Montserrat',
                       ),
@@ -65,26 +66,33 @@ class HomeDesktop extends StatelessWidget {
                       duration: const Duration(milliseconds: 800),
                       child: Image.asset(
                         StaticUtils.hi,
-                        height: AppDimensions.normalize(12),
+                        height: AppDimensions.normalize(25),
                       ),
                     ),
                   ],
                 ),
                 Space.y1!,
-                Text(
-                  "François Xavier",
-                  style: AppText.h1!.copyWith(
-                    fontFamily: 'Montserrat',
-                    fontSize: AppDimensions.normalize(25),
-                    fontWeight: FontWeight.w100,
-                  ),
-                ),
-                Text(
-                  "SOH KEUGNE",
-                  style: AppText.h1b!.copyWith(
-                    fontSize: AppDimensions.normalize(25),
-                    height: 1,
-                  ),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.baseline,
+                  textBaseline: TextBaseline.alphabetic,
+                  children: [
+                    Text(
+                      "Xavier",
+                      style: AppText.h1!.copyWith(
+                        fontFamily: 'Montserrat',
+                        fontSize: AppDimensions.normalize(25),
+                        fontWeight: FontWeight.w100,
+                      ),
+                    ),
+                    SizedBox(width: 16.0),
+                    Text(
+                      "SOH",
+                      style: AppText.h1b!.copyWith(
+                        fontSize: AppDimensions.normalize(25),
+                        height: 1,
+                      ),
+                    ),
+                  ],
                 ),
                 EntranceFader(
                   offset: const Offset(-10, 0),
@@ -96,7 +104,7 @@ class HomeDesktop extends StatelessWidget {
                         Icons.play_arrow_rounded,
                         color: AppTheme.c!.primaryLight!,
                       ),
-                      getTextKit()
+                      getTextKit(context)
                     ],
                   ),
                 ),

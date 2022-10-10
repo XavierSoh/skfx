@@ -1,0 +1,18 @@
+
+{
+"helloWorld": "Bonjour le monde ",
+"welcomeTitle":"BIENVENUE SUR  MA PAGE!",
+"flutterDev":" Développeur Flutter",
+"kotlinDev":" Développeur Kotlin",
+"javaDev":" Développeur Java",
+"googleEn":" Passionné de Google",
+"aFriend":" Votre partenaire :)",
+"aboutMe":"A propos de Moi",
+"getKnowMe":"Apprendre à me connaître :)",
+"whoIAm":"Qui suis-je?",
+"techIWorkedWith":"Technologies avec lesquelles j'ai travaillé :",
+"myResume":"Mon CV",
+"aboutMeHeadline":"Je suis Xavier Soh, développeur Flutter, Kotlin et Java. Ingénieur réseau informatique",
+"aboutMeDetail":"Je suis un développeur mobile formé par google sur la plateforme Udacity, accrédité par une certification du programme \"Android Developers Nanodegree\" avec le langage Java. Je me suis également formé sur la plateforme App Brewery School du Dr Angela Yu, accrédité par une certification de développeur Flutter. En 5 ans d'expérience, j'ai développé plusieurs solutions logicielles pour des entreprises et des clients. J'ai travaillé en équipe pour diverses startups et les ai aidés à lancer leurs prototypes et j'ai acquis une précieuse expérience d'apprentissage. Je travaille également en tant qu'ingénieur en informatique réseaux et télécommunications. Actuellement, je travaille sur une solution PGI, et je prépare mon examen de Certification Google Kotlin."
+
+}

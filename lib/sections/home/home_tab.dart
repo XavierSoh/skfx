@@ -12,8 +12,14 @@ class HomeTab extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
-    return SizedBox(
+    return Container(
       height: size.height * 1.02,
+      decoration: const BoxDecoration(
+        gradient: LinearGradient(
+            begin: Alignment.bottomLeft,
+            end: Alignment.topRight,
+            colors: [Colors.teal, Colors.black54]),
+      ),
       child: Stack(
         children: [
           Positioned(
@@ -86,7 +92,7 @@ class HomeTab extends StatelessWidget {
                         Icons.play_arrow_rounded,
                         color: AppTheme.c!.primary!,
                       ),
-                      getTextKit()
+                      getTextKit(context)
                     ],
                   ),
                 ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:folio/configs/configs.dart';
 import 'package:folio/constants.dart';
-import 'package:folio/utils/about_utils.dart';
 import 'package:folio/utils/utils.dart';
 import 'package:folio/utils/work_utils.dart';
 import 'package:folio/widget/about_me_data.dart';
@@ -15,6 +15,8 @@ class AboutTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l = AppLocalizations.of(context);
+
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
 
@@ -49,7 +51,7 @@ class AboutTab extends StatelessWidget {
           ),
           Space.y1!,
           Text(
-            AboutUtils.aboutMeHeadline,
+            l.aboutMeHeadline,
             style: AppText.b2b!.copyWith(
               fontFamily: 'Montserrat',
             ),
@@ -58,7 +60,7 @@ class AboutTab extends StatelessWidget {
             height: height * 0.02,
           ),
           Text(
-            AboutUtils.aboutMeDetail,
+            l.aboutMeDetail,
             style: AppText.l1!.copyWith(
               height: 2,
               letterSpacing: 1.1,
@@ -77,7 +79,10 @@ class AboutTab extends StatelessWidget {
               color: AppTheme.c!.primary,
             ),
           ),
-          Row(
+          GridView(
+            shrinkWrap: true,
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 4, crossAxisSpacing: 0, mainAxisSpacing: 0, childAspectRatio: 3),
             children: kTools
                 .map(
                   (e) => ToolTechWidget(techName: e),
@@ -92,34 +97,12 @@ class AboutTab extends StatelessWidget {
           Space.y!,
           Row(
             children: [
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
-                  AboutMeData(
-                    data: "Name",
-                    information: "Muhammad Hamza",
-                  ),
-                  AboutMeData(
-                    data: "Age",
-                    information: "24",
-                  ),
-                ],
-              ),
               SizedBox(
                 width: width > 710 ? width * 0.2 : width * 0.05,
               ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: const [
-                  AboutMeData(
-                    data: "Email",
-                    information: "hamza.6.shakeel@gmail.com",
-                  ),
-                  AboutMeData(
-                    data: "From",
-                    information: "Attock, PK",
-                  ),
-                ],
+              const AboutMeData(
+                data: "Email",
+                information: "sohfranc@gmail.com",
               ),
             ],
           ),
@@ -150,7 +133,7 @@ class AboutTab extends StatelessWidget {
               ),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
-                child: Row(
+                child: Wrap(
                     children: WorkUtils.logos
                         .asMap()
                         .entries

@@ -80,7 +80,7 @@ class HomeMobile extends StatelessWidget {
                       Icons.play_arrow_rounded,
                       color: AppTheme.c!.primary!,
                     ),
-                    getTextKit()
+                    getTextKit(context)
                   ],
                 ),
                 Space.y!,

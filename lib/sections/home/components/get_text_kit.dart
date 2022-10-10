@@ -1,26 +1,29 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:folio/configs/app_typography.dart';
 
-AnimatedTextKit getTextKit() {
+AnimatedTextKit getTextKit(BuildContext context) {
+  final l = AppLocalizations.of(context);
   return AnimatedTextKit(
     animatedTexts: [
       TyperAnimatedText(
-        ' Flutter Developer',
+        l.flutterDev,
         speed: const Duration(milliseconds: 50),
         textStyle: AppText.b1,
       ),
       TyperAnimatedText(
-        ' Kotlin Developer',
+        l.kotlinDev,
         speed: const Duration(milliseconds: 50),
         textStyle: AppText.b1,
       ),
       TyperAnimatedText(
-        ' Java Developer',
+        l.javaDev,
         speed: const Duration(milliseconds: 50),
         textStyle: AppText.b1,
       ),
       TyperAnimatedText(
-        ' Google Enthusiast',
+        l.googleEn,
         speed: const Duration(milliseconds: 50),
         textStyle: AppText.b1,
       ),
