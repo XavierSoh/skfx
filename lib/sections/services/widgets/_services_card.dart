@@ -5,7 +5,7 @@ import 'package:folio/configs/app_dimensions.dart';
 import 'package:folio/configs/app_theme.dart';
 import 'package:folio/configs/space.dart';
 import 'package:folio/provider/app_provider.dart';
-import 'package:folio/sections/services/services.dart';
+import 'package:folio/sections/services/widgets/_services_card_back.dart';
 import 'package:folio/utils/utils.dart';
 import 'package:provider/provider.dart';
 

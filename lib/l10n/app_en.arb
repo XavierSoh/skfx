@@ -12,6 +12,23 @@
     "techIWorkedWith":"Technologies I have worked with:",
     "myResume":"My Resume",
     "aboutMeHeadline":"I'm Xavier Soh, a Flutter, Kotlin and Java developer. Computer Network Engineer",
-    "aboutMeDetail":"I am a mobile developer trained by google on the Udacity platform, accredited by a certification from the \"Android Developers Nanodegree\" program with the Java language. I also trained on Dr. Angela Yu's App Brewery School platform, accredited by the Flutter developer certification. In 5 years of experience, I have developed several software solutions for companies and customers. I have worked in teams for various startup  and helped them in launching their prototypes and got a valuable learning experience. I also work as an engineer in computer networks and telecommunications. Currently, I'm working on an PGI solution, and I'm preparing for my Google Kotlin Certification exam."
+    "aboutMeDetail":"I am a mobile developer trained by google on the Udacity platform, accredited by a certification from the \"Android Developers Nanodegree\" program with the Java language. I also trained on Dr. Angela Yu's App Brewery School platform, accredited by the Flutter developer certification. In 5 years of experience, I have developed several software solutions for companies and customers. I have worked in teams for various startup  and helped them in launching their prototypes and got a valuable learning experience. I also work as an engineer in computer networks and telecommunications. Currently, I'm working on an PGI solution, and I'm preparing for my Google Kotlin Certification exam.",
+    "mobileAppDev":"Mobile App Development",
+    "responsiveWebsiteDev":"Responsive Website Development",
+    "uiUx":"UI/UX Designing",
+    "rapidPrototyping":"Rapid Prototyping",
+    "viaFlutter":"Android app development via Flutter, Java & Kotlin\n-Chat apps \n  Firebase Auth/Cloud\n- REST APIs\n- Maps integration and more...!",
+    "websiteCreator":"Website creator\n - E-commerce\n- Blogs\n- Landing pages",
+    "modernUI":"Modern UI/UX Designing\n- Mobile & Web designs\n- Interactive UI designs\n- Responsiveness\n- Promo Videos and more..!",
+    "rapidPrototypeDesc":"Rapid Prototype via Flutter, Java & Kotlin \n- Working MVP\n- Quick & Working prototype",
+    "heyThere":"Hey there",
+    "getInTouch":"\nGet in Touch",
+    "buildTogether":"Construisons quelque chose ensemble :)\n\n",
+    "whatICanDo":"\nWhat I Can Do?",
+    "mayNotBePerfect":"I may not be perfect but I will surely be of some use to you :)\n\n",
+    "hireMe":"Hire Me!",
+    "back":"Back"
+
+
 
 }

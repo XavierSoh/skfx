@@ -1,4 +1,13 @@
-part of '../services.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:folio/configs/app_dimensions.dart';
+import 'package:folio/configs/app_theme.dart';
+import 'package:folio/configs/app_typography.dart';
+import 'package:folio/configs/space.dart';
+import 'package:folio/constants.dart';
+import 'package:folio/provider/app_provider.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:provider/provider.dart';
 
 class ServiceCardBackWidget extends StatelessWidget {
   const ServiceCardBackWidget({Key? key, required this.serviceDesc, required this.serviceTitle})
@@ -10,6 +19,7 @@ class ServiceCardBackWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final appProvider = Provider.of<AppProvider>(context);
+    final l = AppLocalizations.of(context);
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -29,13 +39,13 @@ class ServiceCardBackWidget extends StatelessWidget {
                 context: context,
                 builder: (contecxt) => AlertDialog(
                       title: Text(
-                        "Hire Me!",
+                        l.hireMe,
                         style: AppText.b2b,
                       ),
                       actions: [
                         TextButton(
                           onPressed: () => Navigator.pop(context),
-                          child: const Text("Back"),
+                          child: Text(l.back),
                         )
                       ],
                       content: Column(
@@ -94,7 +104,7 @@ class ServiceCardBackWidget extends StatelessWidget {
                       ),
                     )),
             child: Text(
-              'HIRE ME!',
+              l.hireMe,
               style: AppText.b2!.copyWith(
                 color: Colors.white,
               ),

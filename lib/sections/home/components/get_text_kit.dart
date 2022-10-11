@@ -28,7 +28,7 @@ AnimatedTextKit getTextKit(BuildContext context) {
         textStyle: AppText.b1,
       ),
       TyperAnimatedText(
-        ' A friend :)',
+        l.aFriend,
         speed: const Duration(milliseconds: 50),
         textStyle: AppText.b1,
       ),

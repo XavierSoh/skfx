@@ -25,14 +25,14 @@ class AboutTab extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          const Center(
+          Center(
             child: CustomSectionHeading(
-              text: '\nAbout Me',
+              text: '\n${l.aboutMe}',
             ),
           ),
-          const Center(
+          Center(
             child: CustomSectionSubHeading(
-              text: 'Get to know me :)',
+              text: l.getKnowMe,
             ),
           ),
           Space.y1!,
@@ -44,7 +44,7 @@ class AboutTab extends StatelessWidget {
             height: height * 0.03,
           ),
           Text(
-            "Who am I?",
+            l.whoIAm,
             style: AppText.b2!.copyWith(
               color: AppTheme.c!.primary,
             ),
@@ -74,7 +74,7 @@ class AboutTab extends StatelessWidget {
           ),
           Space.y!,
           Text(
-            'Technologies I have worked with:',
+            l.techIWorkedWith,
             style: AppText.l1!.copyWith(
               color: AppTheme.c!.primary,
             ),
@@ -114,8 +114,8 @@ class AboutTab extends StatelessWidget {
                 width: AppDimensions.normalize(40),
                 child: OutlinedButton(
                   onPressed: () => html.window.open(StaticUtils.resume, 'pdf'),
-                  child: const Text(
-                    "Resume",
+                  child: Text(
+                    l.myResume,
                   ),
                 ),
               ),
@@ -134,17 +134,18 @@ class AboutTab extends StatelessWidget {
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Wrap(
-                    children: WorkUtils.logos
-                        .asMap()
-                        .entries
-                        .map(
-                          (e) => CommunityIconBtn(
-                            icon: e.value,
-                            link: WorkUtils.communityLinks[e.key],
-                            height: WorkUtils.communityLogoHeight[e.key],
-                          ),
-                        )
-                        .toList()),
+                  children: WorkUtils.logos
+                      .asMap()
+                      .entries
+                      .map(
+                        (e) => CommunityIconBtn(
+                          icon: e.value,
+                          link: WorkUtils.communityLinks[e.key],
+                          height: WorkUtils.communityLogoHeight[e.key],
+                        ),
+                      )
+                      .toList(),
+                ),
               ),
             ],
           )

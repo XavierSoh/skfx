@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:folio/configs/configs.dart';
 import 'package:folio/utils/utils.dart';
 import 'package:folio/widget/social_links.dart';
@@ -11,7 +12,7 @@ class HomeMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-
+    final l = AppLocalizations.of(context);
     return Container(
       height: size.height * 1.02,
       decoration: const BoxDecoration(
@@ -47,7 +48,7 @@ class HomeMobile extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Text(
-                      "HEY THERE! ",
+                      l.heyThere,
                       style: AppText.b2!.copyWith(
                         fontFamily: 'Montserrat',
                       ),
@@ -60,18 +61,22 @@ class HomeMobile extends StatelessWidget {
                   ],
                 ),
                 Space.y!,
-                Text(
-                  "François Xavier",
-                  style: AppText.h3!.copyWith(
-                    fontFamily: 'Montserrat',
-                    fontWeight: FontWeight.w100,
-                  ),
-                ),
-                Text(
-                  "Soh Keugne",
-                  style: AppText.h3b!.copyWith(
-                    height: 1,
-                  ),
+                Row(
+                  children: [
+                    Text(
+                      "Xavier",
+                      style: AppText.h3!.copyWith(
+                        fontFamily: 'Montserrat',
+                        fontWeight: FontWeight.w100,
+                      ),
+                    ),
+                    Text(
+                      "Soh",
+                      style: AppText.h3b!.copyWith(
+                        height: 1,
+                      ),
+                    ),
+                  ],
                 ),
                 Space.y!,
                 Row(

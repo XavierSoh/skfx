@@ -1,4 +1,10 @@
-part of 'services.dart';
+import 'package:flip_card/flip_card.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:folio/configs/space.dart';
+import 'package:folio/sections/services/widgets/_services_card.dart';
+import 'package:folio/utils/services_utils.dart';
+import 'package:folio/widget/custom_text_heading.dart';
 
 class ServiceDesktop extends StatefulWidget {
   const ServiceDesktop({Key? key}) : super(key: key);
@@ -14,16 +20,17 @@ class ServiceDesktopState extends State<ServiceDesktop> {
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
+    final l = AppLocalizations.of(context);
 
     return Container(
       padding: Space.hf(4),
       child: Column(
         children: [
-          const CustomSectionHeading(
-            text: '\nWhat I can do?',
+          CustomSectionHeading(
+            text: l.whatICanDo,
           ),
-          const CustomSectionSubHeading(
-            text: 'I may not be perfect but surely I\'m of some use :)\n\n',
+          CustomSectionSubHeading(
+            text: l.mayNotBePerfect,
           ),
           Space.y!,
           Wrap(
@@ -37,8 +44,8 @@ class ServiceDesktopState extends State<ServiceDesktop> {
                 .map(
                   (e) => ServiceCard(
                     serviceIcon: ServicesUtils.servicesIcons[e.key],
-                    serviceTitle: ServicesUtils.servicesTitles[e.key],
-                    serviceDescription: ServicesUtils.servicesDescription[e.key],
+                    serviceTitle: ServicesUtils.servicesTitles(l)[e.key],
+                    serviceDescription: ServicesUtils.servicesDescription(l)[e.key],
                   ),
                 )
                 .toList(),

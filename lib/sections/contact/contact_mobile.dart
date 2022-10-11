@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:folio/configs/app_dimensions.dart';
 import 'package:folio/utils/contact_utils.dart';
 import 'package:folio/widget/custom_text_heading.dart';
@@ -10,13 +11,14 @@ class ContactMobileTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l = AppLocalizations.of(context);
     return Column(
       children: [
-        const CustomSectionHeading(
-          text: "\nGet in Touch",
+        CustomSectionHeading(
+          text: l.getInTouch,
         ),
-        const CustomSectionSubHeading(
-          text: "Let's build something together :)\n\n",
+        CustomSectionSubHeading(
+          text: l.buildTogether,
         ),
         CarouselSlider.builder(
           itemCount: 3,

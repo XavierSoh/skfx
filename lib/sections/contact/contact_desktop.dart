@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:folio/animations/bottom_animation.dart';
 import 'package:folio/configs/configs.dart';
 import 'package:folio/utils/contact_utils.dart';
@@ -10,15 +11,17 @@ class ContactDesktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l = AppLocalizations.of(context);
+
     return Container(
       padding: Space.all(1, 1),
       child: Column(
         children: [
-          const CustomSectionHeading(
-            text: "\nGet in Touch",
+          CustomSectionHeading(
+            text: l.getInTouch,
           ),
-          const CustomSectionSubHeading(
-            text: "Let's build something together :)\n\n",
+          CustomSectionSubHeading(
+            text: l.buildTogether,
           ),
           Space.y!,
           Wrap(

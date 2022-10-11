@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:folio/animations/entrance_fader.dart';
 import 'package:folio/configs/configs.dart';
 import 'package:folio/sections/home/components/get_text_kit.dart';
@@ -11,7 +12,7 @@ class HomeTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-
+    final l = AppLocalizations.of(context);
     return Container(
       height: size.height * 1.02,
       decoration: const BoxDecoration(
@@ -52,7 +53,7 @@ class HomeTab extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Text(
-                      'WELCOME TO MY PORTFOLIO! ',
+                      l.welcomeTitle,
                       style: AppText.b2!.copyWith(
                         fontFamily: 'Montserrat',
                       ),
@@ -70,14 +71,14 @@ class HomeTab extends StatelessWidget {
                 ),
                 Space.y1!,
                 Text(
-                  "François Xavier",
+                  "Xavier",
                   style: AppText.h1!.copyWith(
                     fontFamily: 'Montserrat',
                     fontWeight: FontWeight.w100,
                   ),
                 ),
                 Text(
-                  "Soh keugne",
+                  "Soh",
                   style: AppText.h1b!.copyWith(
                     height: 1,
                   ),

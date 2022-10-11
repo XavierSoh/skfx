@@ -1,4 +1,10 @@
-part of 'services.dart';
+import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:folio/configs/configs.dart';
+import 'package:folio/sections/services/widgets/_services_card.dart';
+import 'package:folio/utils/services_utils.dart';
+import 'package:folio/widget/custom_text_heading.dart';
 
 class ServiceMobile extends StatelessWidget {
   const ServiceMobile({Key? key}) : super(key: key);
@@ -7,23 +13,25 @@ class ServiceMobile extends StatelessWidget {
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
+    final l = AppLocalizations.of(context);
+
     return Column(
       children: [
-        const CustomSectionHeading(
-          text: '\nWhat I can do?',
+        CustomSectionHeading(
+          text: l.whatICanDo,
         ),
-        const CustomSectionSubHeading(
-          text: 'I may not be perfect but surely I\'m of some use :)\n\n',
+        CustomSectionSubHeading(
+          text: l.mayNotBePerfect,
         ),
         Space.y!,
         CarouselSlider.builder(
-          itemCount: ServicesUtils.servicesTitles.length,
+          itemCount: ServicesUtils.servicesTitles(l).length,
           itemBuilder: (BuildContext context, int itemIndex, int i) => Padding(
             padding: const EdgeInsets.symmetric(vertical: 10.0),
             child: ServiceCard(
               serviceIcon: ServicesUtils.servicesIcons[i],
-              serviceTitle: ServicesUtils.servicesTitles[i],
-              serviceDescription: ServicesUtils.servicesDescription[i],
+              serviceTitle: ServicesUtils.servicesTitles(l)[i],
+              serviceDescription: ServicesUtils.servicesDescription(l)[i],
             ),
           ),
           options: CarouselOptions(
