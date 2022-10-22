@@ -49,21 +49,12 @@ class AboutMobile extends StatelessWidget {
           Space.y1!,
           Text(
             l.aboutMeHeadline,
-            style: AppText.b2b!.copyWith(
-              fontFamily: 'Montserrat',
-            ),
+            style: AppText.b2b!,
           ),
           SizedBox(
             height: height * 0.02,
           ),
-          Text(
-            l.aboutMeDetail,
-            style: AppText.l1!.copyWith(
-              height: 2,
-              letterSpacing: 1.1,
-              fontFamily: 'Montserrat',
-            ),
-          ),
+          Text(l.aboutMeDetail),
           Space.y!,
           Divider(
             color: Colors.grey[800],
@@ -72,7 +63,7 @@ class AboutMobile extends StatelessWidget {
           Space.y!,
           Text(
             l.techIWorkedWith,
-            style: AppText.l1!.copyWith(
+            style: TextStyle(
               color: AppTheme.c!.primary,
             ),
           ),

@@ -21,12 +21,12 @@ class ContactMobileTab extends StatelessWidget {
           text: l.buildTogether,
         ),
         CarouselSlider.builder(
-          itemCount: 3,
+          itemCount: 2,
           itemBuilder: (BuildContext context, int itemIndex, int i) => Padding(
             padding: const EdgeInsets.symmetric(vertical: 10.0),
             child: ProjectCard(
               projectIconData: ContactUtils.contactIcon[i],
-              projectTitle: ContactUtils.titles[i],
+              projectTitle: ContactUtils.titles(context)[i],
               projectDescription: ContactUtils.details[i],
             ),
           ),

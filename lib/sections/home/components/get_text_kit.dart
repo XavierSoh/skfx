@@ -28,6 +28,16 @@ AnimatedTextKit getTextKit(BuildContext context) {
         textStyle: AppText.b1,
       ),
       TyperAnimatedText(
+        l.systemAdmin,
+        speed: const Duration(milliseconds: 50),
+        textStyle: AppText.b1,
+      ),
+      TyperAnimatedText(
+        l.opticalSupport,
+        speed: const Duration(milliseconds: 50),
+        textStyle: AppText.b1,
+      ),
+      TyperAnimatedText(
         l.aFriend,
         speed: const Duration(milliseconds: 50),
         textStyle: AppText.b1,

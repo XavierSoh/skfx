@@ -3,11 +3,18 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:folio/configs/configs.dart';
 import 'package:folio/utils/utils.dart';
 import 'package:folio/widget/social_links.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'components/get_text_kit.dart';
 
 class HomeMobile extends StatelessWidget {
   const HomeMobile({Key? key}) : super(key: key);
+  Future<void> _launchUrl() async {
+    var _url = Uri.parse('https://play.google.com/store/apps/developer?id=Xavier+SOH');
+    if (!await launchUrl(_url)) {
+      throw 'Could not launch $_url';
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -90,6 +97,11 @@ class HomeMobile extends StatelessWidget {
                 ),
                 Space.y!,
                 const SocialLinks(),
+                GestureDetector(
+                    onTap: () {
+                      _launchUrl();
+                    },
+                    child: Image.asset("assets/googleplay.png"))
               ],
             ),
           ),

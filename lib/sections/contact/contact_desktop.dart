@@ -25,19 +25,22 @@ class ContactDesktop extends StatelessWidget {
           ),
           Space.y!,
           Wrap(
-              alignment: WrapAlignment.center,
-              runSpacing: AppDimensions.normalize(10),
-              children: ContactUtils.contactIcon
-                  .asMap()
-                  .entries
-                  .map((e) => WidgetAnimator(
-                        child: ProjectCard(
-                          projectIconData: e.value,
-                          projectTitle: ContactUtils.titles[e.key],
-                          projectDescription: ContactUtils.details[e.key],
-                        ),
-                      ))
-                  .toList()),
+            alignment: WrapAlignment.center,
+            runSpacing: AppDimensions.normalize(10),
+            children: ContactUtils.contactIcon
+                .asMap()
+                .entries
+                .map(
+                  (e) => WidgetAnimator(
+                    child: ProjectCard(
+                      projectIconData: e.value,
+                      projectTitle: ContactUtils.titles(context)[e.key],
+                      projectDescription: ContactUtils.details[e.key],
+                    ),
+                  ),
+                )
+                .toList(),
+          ),
         ],
       ),
     );

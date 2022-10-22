@@ -21,13 +21,17 @@
     "websiteCreator":"Website creator\n - E-commerce\n- Blogs\n- Landing pages",
     "modernUI":"Modern UI/UX Designing\n- Mobile & Web designs\n- Interactive UI designs\n- Responsiveness\n- Promo Videos and more..!",
     "rapidPrototypeDesc":"Rapid Prototype via Flutter, Java & Kotlin \n- Working MVP\n- Quick & Working prototype",
-    "heyThere":"Hey there",
+    "heyThere":"Hey there i am",
     "getInTouch":"\nGet in Touch",
     "buildTogether":"Construisons quelque chose ensemble :)\n\n",
     "whatICanDo":"\nWhat I Can Do?",
     "mayNotBePerfect":"I may not be perfect but I will surely be of some use to you :)\n\n",
     "hireMe":"Hire Me!",
-    "back":"Back"
+    "back":"Back",
+    "phone":"Phone",
+    "email":"E-mail",
+    "systemAdmin":"IT systems administrator",
+    "opticalSupport":"Optical support technician"
 
 
 
